@@ -35,7 +35,10 @@ def get_contributors(con_list):
 
 
 def subject_formater(subject_list, b064):
-    return_list = [b064]
+    if b064 != '':
+        return_list = [b064]
+    else:
+        return_list = []
     keywords = []
     for s in subject_list:
         typ = s.findChild('b067').get_text()
